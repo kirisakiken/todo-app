@@ -7,6 +7,10 @@ export default function App() {
   const [taskItems, setTaskItems] = useState([]);
 
   const handleAddTask = () => {
+    if (!task) {
+      return
+    }
+
     setTaskItems([...taskItems, task]);
     setTask('');
     console.log(taskItems);
